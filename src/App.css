@@ -72,3 +72,29 @@
 .browse-button:hover {
   background-color: #ff3b00;
 }
+
+.filter-sidebar {
+  padding: 20px;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.reset-icon {
+  cursor: pointer;
+}
+
+.filter-section ul,
+.filters ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+  margin: 5px 0;
+}
