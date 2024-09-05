@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+/* My Added CSS */
+.hero-section {
+  position: relative;
+  height: 600px;
+  background-image: url('/public/assets/Masthead.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Avoids the horizontal scrollbar caused by vw units */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.browse-button {
+  padding: 10px 20px;
+  background-color: #ff6b35; /* Orange */
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.browse-button:hover {
+  background-color: #ff3b00;
+}

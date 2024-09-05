@@ -1,0 +1,56 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%; /* Ensures the header only takes up the width of the viewport */
+  max-width: 100vw; /* Prevents exceeding the viewport width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5); /* Transparent background */
+  box-sizing: border-box; /* Ensures padding is included within the width */
+  overflow: hidden; /* Prevents overflow */
+}
+
+.header .logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header .nav-links a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.header .nav-links a:hover {
+  text-decoration: underline;
+}
+
+.header .cart a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.cart .cart-count {
+  margin-left: 6px;
+  font-size: 1rem;
+  background-color: #ff6f61;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.cart-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+}
