@@ -107,6 +107,7 @@ const MainPage = () => {
           colors={colors}
           handleColorFilter={handleColorFilter}
           resetFilters={resetFilters}
+          selectedFilters={selectedFilters}
         />
 
         <section className='product-listings'>

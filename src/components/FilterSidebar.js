@@ -6,7 +6,8 @@ const FilterSidebar = ({
   handleFilter,
   colors,
   handleColorFilter,
-  resetFilters, // Function to reset filters
+  resetFilters,
+  selectedFilters,
 }) => {
   return (
     <div className='filter-sidebar'>
@@ -25,7 +26,15 @@ const FilterSidebar = ({
         <h4>Materials</h4>
         <ul>
           {materials.map((material) => (
-            <li key={material.id} onClick={() => handleFilter(material.id)}>
+            <li
+              key={material.id}
+              className={
+                selectedFilters.material === material.id
+                  ? 'selected-filter'
+                  : ''
+              }
+              onClick={() => handleFilter(material.id)}
+            >
               {material.name}
             </li>
           ))}
@@ -37,7 +46,13 @@ const FilterSidebar = ({
         <h4>Colors</h4>
         <ul>
           {colors.map((color) => (
-            <li key={color.id} onClick={() => handleColorFilter(color.id)}>
+            <li
+              key={color.id}
+              className={
+                selectedFilters.color === color.id ? 'selected-filter' : ''
+              }
+              onClick={() => handleColorFilter(color.id)}
+            >
               {color.name}
             </li>
           ))}

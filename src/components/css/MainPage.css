@@ -125,3 +125,17 @@
 .pagination button:hover {
   color: #000000;
 }
+
+/* Style for selected filter */
+.selected-filter {
+  background-color: #ff6b35;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+li:hover {
+  background-color: #ffe6d5;
+  cursor: pointer;
+}
