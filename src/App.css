@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-/* My Added CSS */
 .hero-section {
   position: relative;
   height: 600px;
@@ -12,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Avoids the horizontal scrollbar caused by vw units */
+  width: 100%;
   margin: 0;
   box-sizing: border-box;
 }
@@ -25,7 +24,7 @@
 
 .browse-button {
   padding: 10px 20px;
-  background-color: #ff6b35; /* Orange */
+  background-color: #ff6b35;
   border: none;
   color: white;
   font-size: 16px;

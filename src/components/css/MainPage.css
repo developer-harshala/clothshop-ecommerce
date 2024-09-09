@@ -1,9 +1,8 @@
-/* MainPage.css */
 .main-page {
-  max-width: 100%; /* Ensures the main page doesn't exceed the screen width */
-  padding: 0; /* Set padding to 0 to avoid extra spacing */
-  box-sizing: border-box; /* Ensures padding is part of the element’s width */
-  margin: 0 auto; /* Centers the content */
+  max-width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .product-listings {
@@ -11,9 +10,9 @@
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   gap: 20px;
   width: 80%;
-  max-width: 100%; /* Prevents grid from overflowing */
-  padding: 0 20px; /* Horizontal padding only */
-  box-sizing: border-box; /* Ensures padding is part of the grid’s width */
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .product {
@@ -64,7 +63,6 @@
   transition: opacity 0.3s ease;
 }
 
-/* Dark overlay */
 .product-image-container::after {
   content: '';
   position: absolute;
@@ -72,36 +70,58 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+  background-color: rgba(0, 0, 0, 0);
   transition: background-color 0.3s ease;
-  z-index: 1; /* Ensure the overlay is above the image */
+  z-index: 1;
 }
 
 .product-image-container:hover::after {
-  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay on hover */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Add-to-Cart button styling */
 .add-to-cart-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(
-    255,
-    87,
-    51,
-    0.8
-  ); /* Semi-transparent button background */
+  background-color: rgba(255, 87, 51, 0.8);
   color: white;
   border: none;
   padding: 10px 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 2; /* Ensure button is above the overlay */
+  z-index: 2;
 }
 
 .product-image-container:hover .add-to-cart-btn {
   opacity: 1;
-  cursor: pointer; /* Ensures the button is clickable */
+  cursor: pointer;
+}
+
+.pagination {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}
+
+.pagination button.active {
+  font-weight: bold;
+  color: #333;
+  border-radius: 50%;
+  background-color: lightgrey;
+}
+
+.pagination button:hover {
+  color: #000000;
 }

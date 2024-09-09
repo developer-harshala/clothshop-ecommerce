@@ -1,0 +1,59 @@
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center;
+  /* Center items vertically */
+}
+
+.col-md-4 {
+  flex: 1;
+  /* Make columns equally sized */
+  text-align: left; /* Align text to the left */
+}
+
+.footer img {
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+
+.payment-icons {
+  margin-top: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin-bottom: 1rem;
+}
+
+.footer .col-md-4:last-child {
+  text-align: right; /* Align the last column's text to the right */
+}

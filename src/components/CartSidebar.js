@@ -5,6 +5,7 @@ const CartSidebar = ({ cart, handleRemoveFromCart }) => {
   return (
     <div className='cart-sidebar'>
       <h2>Your Cart</h2>
+      <h3>Total Products: {cart.length}</h3>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
