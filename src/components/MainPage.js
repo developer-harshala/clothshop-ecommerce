@@ -4,6 +4,7 @@ import Header from './Header'
 import HeroSection from './HeroSection'
 import CartSidebar from './CartSidebar' // The sliding cart panel
 import FilterSidebar from './FilterSidebar'
+import defaultImage from '../assets/Image.png'
 import './css/MainPage.css'
 
 const MainPage = () => {
@@ -15,6 +16,8 @@ const MainPage = () => {
     material: null,
   })
   const [filteredProducts, setFilteredProducts] = useState(products)
+  const [currentPage, setCurrentPage] = useState(1) // State for current page
+  const productsPerPage = 9 // Products per page
 
   // Function to get the color name from the color ID
   const getColorName = (colorId) => {
@@ -85,7 +88,6 @@ const MainPage = () => {
     }))
   }
 
-  // Re-apply filters whenever the filter selection changes
   useEffect(() => {
     applyFilters()
   }, [selectedFilters, products])
@@ -108,14 +110,25 @@ const MainPage = () => {
         <section className='product-listings'>
           {filteredProducts.map((product) => (
             <div key={product.id} className='product'>
-              <img src={product.image} alt={product.name} />
+              <div className='product-image-container'>
+                <img
+                  src={product.image || defaultImage}
+                  alt={product.name}
+                  onError={(e) => {
+                    e.target.src = defaultImage // If image fails to load, show default image
+                  }}
+                />
+                <button
+                  className='add-to-cart-btn'
+                  onClick={() => handleAddToCart(product)}
+                >
+                  Add to Cart
+                </button>
+              </div>
               <h3>{product.name}</h3>
               <p>Price: {product.price}</p>
               <p>Color: {getColorName(product.colorId)}</p>
               <p>Material: {getMaterialName(product.materialId)}</p>
-              <button onClick={() => handleAddToCart(product)}>
-                Add to Cart
-              </button>
             </div>
           ))}
         </section>

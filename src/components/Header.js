@@ -1,12 +1,13 @@
 import React from 'react'
 import './css/Header.css'
 import { MdOutlineShoppingCart } from 'react-icons/md'
+import logo from '../../src/assets/RIGHTFIT.COM.png'
 
 const Header = () => {
   return (
     <header className='header'>
       <div className='logo'>
-        <a href='/'>RIGHTFIT.COM</a>
+        <img src={logo} alt='logo' />
       </div>
       <div className='cart-section'>
         <nav className='nav-links'>

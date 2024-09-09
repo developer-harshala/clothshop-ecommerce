@@ -1,0 +1,24 @@
+{
+  "material": [
+    {
+      "id": 2,
+      "name": "cotton"
+    },
+    {
+      "id": 3,
+      "name": "leather"
+    },
+    {
+      "id": 4,
+      "name": "lycra"
+    },
+    {
+      "id": 5,
+      "name": "plastic"
+    },
+    {
+      "id": 6,
+      "name": "polyester"
+    }
+  ]
+}
