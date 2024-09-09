@@ -12,15 +12,13 @@
 
 .row {
   display: flex;
-  justify-content: space-between; /* Align items to the left and right */
+  justify-content: space-between;
   align-items: center;
-  /* Center items vertically */
 }
 
 .col-md-4 {
   flex: 1;
-  /* Make columns equally sized */
-  text-align: left; /* Align text to the left */
+  text-align: left;
 }
 
 .footer img {
@@ -55,5 +53,5 @@ a:hover {
 }
 
 .footer .col-md-4:last-child {
-  text-align: right; /* Align the last column's text to the right */
+  text-align: right;
 }

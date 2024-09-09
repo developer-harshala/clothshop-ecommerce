@@ -11,7 +11,6 @@ const FilterSidebar = ({
 }) => {
   return (
     <div className='filter-sidebar'>
-      {/* Align the filter heading and reset icon in one line */}
       <div className='filter-header'>
         <h3>Filter</h3>
         <RxReset
